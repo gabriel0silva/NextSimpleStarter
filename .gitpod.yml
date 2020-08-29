@@ -1,9 +1,3 @@
-ports:
-  - port: 3000
-    onOpen: open-preview
-tasks:
-  - init: yarn
-    command: yarn dev
-github:
-  prebuilds:
-    pullRequestsFromForks: true
+vscode:
+  extensions:
+    - ritwickdey.LiveServer@5.6.1:5Mhl1RgVVDcIym163x8r+w==
