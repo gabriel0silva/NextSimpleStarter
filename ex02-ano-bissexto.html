@@ -43,6 +43,14 @@
          alert('O ano NÃO É BISSESTO')
      }
 
+    // Jeito masi otimizado
+    if(isNaN(ano) || ano % 4 == 0 && ano % 100 !== 0) {
+        alert('O ano informado é bissesto')
+    }
+    else {
+        alert('O ano informado Não é Bissesto')
+    }
+
 
     </script>
 </head>
