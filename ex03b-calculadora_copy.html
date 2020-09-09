@@ -36,34 +36,22 @@
         if(isNaN(num1) || isNaN(num2)) {
             alert('ERRO: um dos números que você digitou é inválido.')
         }
-        else {
-            switch(op) {
-                case '+':
-                    res = num1 + num2
-                    break
-
-                case '-':
-                    res = num1 - num2
-                    break
-                    
-                case 'X':     // case vazio
-                case 'x':
-                case '*':
-                    res = num1 * num2
-                    break
-
-                case '/':     //case vazio
-                case ':':
-                    res = num1 / num2
-                    break
-            
-                default:
-                    alert('ERRO: o operador informado é invalido')
-                    mErro = true
-            }
-                  
+        else if (op == '+') {
+            res = num1 + num2
         }
-        
+        else if (op == '-') {
+            res = num1 - num2
+        }
+        else if (op == '*' || op == 'X' || op == 'x') {
+            res = num1 * num2
+        }
+        else if (op == '/' || op == ':') {
+            res = num1 / num2
+        }
+        else {
+            alert('O operador que você digitou não é valído')
+            temErro = true       
+        }
         if(!temErro) {
         //document.write(res)
         
