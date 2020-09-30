@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modelo de documento HTML</title>
+	<script>
+			//'use strict' impede que variaveis sejam declaradas
+			//sem o uso de let, var ou const
+			//inicializar variaveis diretamente é ma pratica de
+			//programação
+			'use strict'
+
+            //Contagem de 29 em 29 km para saber se existe alguma lombofaixa a frente
+            //O raciocinio foi que de um determinado (ex = 1) a cada loop do for iria ser somado o
+            //número 29, até chegar ao número maxímo de 400.
+
+            // Franca - São Paulo
+            for(let i = 400; i >= 1; i -= 29) {
+                document.write(i + '<br>')
+            }
+
+            // São Paulo - Franca
+            for(let i = 1; i <= 400; i += 29) {
+                document.write(i + '<br>')
+            }
+
+            // Foi adicionada a variavel "km" para realizar a verificar se o número digitado é
+            // valido para seguir com o loop do while, Se o número digitado for uma string
+            // ou um número < 1 ou > 400 o loop continuara até que o usuario digite um número valido.
+
+            let km
+            let mostragemKm
+
+            do {
+                km = parseInt(prompt('Informe um Km entre 1 a 400'))
+            } while (isNaN(km) || km < 1 || km > 400)
+
+            // O switch case foi adicionado para informar uma frase para determinado número que o 
+            // usuario digitar, e se o número não cair em nenhuma dessas condições, irá aparecer
+            // uma outra frase.
+            
+            switch(km) {
+                case 92:
+                case 177:
+                case 291:
+                case 388:
+                    mostragemKm = 'Megalojas do Magazine Luiza'
+                    break
+
+                case 153:
+                case 396:
+                    mostragemKm = 'Drive-thru dos Calçados Rafarillo'
+                    break
+
+                case 187:
+                    mostragemKm = 'Posto de recarga da Viação São José'
+                    break
+
+                case 210:
+                    mostragemKm = 'Filial da Padaria Estrela'
+                    break
+
+                case 314:
+                    mostragemKm = 'Fábrica do Jubileu do Amendoim'
+                    break
+
+                case 367:
+                    mostragemKm = 'Franca AcquaParque Unidade II'
+                    break
+
+                default:
+                    mostragemKm = 'Vapo, tem nada aqui não. Segue reto toda vida,meu fii.'
+
+            }
+
+            alert(mostragemKm)
+
+                
+
+            
+
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
