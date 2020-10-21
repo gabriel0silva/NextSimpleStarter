@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modelo de documento HTML</title>
+	<script>
+			//'use strict' impede que variaveis sejam declaradas
+			//sem o uso de let, var ou const
+			//inicializar variaveis diretamente é ma pratica de
+			//programação
+			'use strict'
+
+            // Declarando um vetor
+            
+            let vetor1 = []         // Forma moderna
+            let vetor2 = Array()    // Forma tradicional
+
+            // Declarando e inicializando vetores com elementos
+            let carros = ['Fusca', 'Del Rey', 'Passat', 'Opala']
+            let cores = Array('verde', 'laranja', 'branco', 'vermelho', 'amarelo', 'rosa')
+            let numeros = Array(1, 3, 5, 7, 11, 13, 19)
+
+            // vetor de tipos misturados
+            let mistuta = ['João da Couves', 63, false, null, undefined]
+
+            let frutas = []
+
+            /* push(): Insere novos elementos no FINAL do vetor */
+            frutas.push('Laranja')
+            frutas.push('Melancia')
+            frutas.push('maça', 'limão', 'pera') // Pode inserir mais de um elemento de uma vez
+            console.log(frutas)
+
+            // unsshift(): insere novos elementos no INICIO do vetor
+            frtutas.unshift('jaboticaba') 
+            frutas.unshift('amora')
+
+            // pop(): retira UM elemento do FINAL do vetor
+            let retirado = frutas.pop() // Retira e armazena o número retirado em uma variavel
+            frutas.pop() // Retira e pede
+            console.log('Retirado:', retirado)
+
+            // shift(): retira UM elemento do INICIO do vetor
+            frutas.shift()     // Retira e perde
+            retiarado = frutas.shift()  // Retira e coloca em uma variável
+            console.log('Retirado:', retirado)
+
+            /* plice(): Insere elementos em uma posição específica do vetor
+                 Parâmetros:
+                 1°: a posição onde será feita a inserção
+                 2°: quantos elementos serão APAGADOS (para inseção deverá ser (0))
+                 3° em diante: os elementos que serão inseridos
+            */
+            frutas.splice(2, 0, 'morango')
+            frutas.splice(1, 0, 'jaca', 'ameixa')
+
+            /* Usando splice() para fazer substituição */
+            frutas.splice(3, 1, 'manga')  // 1 elemento será apagado e substituido na posição 3
+
+            /* splice(): também tira elementos de uma posição específica do vetor
+                Parãmetros:
+                1°: posição onde será feita a retirada
+                2°: quantidade de elementos que serão removidos (> 0)
+            */
+            retirado = frutas.splice(1, 1)
+            console.log('Retirado:', retirado)
+
+            // Colocando novos elementos para massa de teste
+            frutas.push('framboesa', 'caju', 'maracuja', 'mexerica')
+
+            // Retirando vários elementod de uma vez
+            retitirado = frutas.splice(4, 3) // A partir da posição 4, retire 3 elementos
+            console.log('Retirado:', retirado)
+
+            // Retirando o último elemento do vetor
+            frutas.splice(-1, 1) // Posição negativa conta as posições de trás para frente
+
+            /* legth: retorna o número de elementos do vetor */
+            console.log('Número de elementos:', frutas.legth) // Não pode ser leght
+
+            /* indexOf: retorna a posição da primeira ocorrência do valor especificado
+                ou -1 caso o valor não exista no vetor
+            */
+            console.log('ameixa: ', frutas.indexOf('ameixa'))
+            console.log('melão: ', frutas.indexOf('melão'))
+            console.log('morango: ', frutas.indexOf('morango'))
+
+            if(fruta.indexOf('manga') >= 0) {
+                console.log('Existe')
+            }
+            else {
+                console.log('Não existe')
+            }
+
+            /*
+                includes(): retorna se o valor de busca existe (true) ou não existe (false) dentro do valor
+            */
+            console.log('ameixa: ', frutas.includes('ameixa'))
+            console.log('melão: ', frutas.includes('melão'))
+            console.log('morango: ', frutas.includes('morango'))
+            
+
+
+            
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
